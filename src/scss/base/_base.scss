@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff;
+  font-size: 1em;
+  padding: 2.3em;
+  margin: 0 auto;
+  max-width: 550px;
+  transition: $animation;
+  @include themify($themes) {
+    background-color: themed('bg-main');
+  }
+}

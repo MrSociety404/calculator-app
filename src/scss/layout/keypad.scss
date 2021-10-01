@@ -1,0 +1,52 @@
+.keypad {
+  width: 100%;
+  height: 450px;
+  border-radius: 15px;
+  padding: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  transition: color .5s ease-in, background-color .5s ease-in;
+  @include themify($themes) {
+    background-color: themed('bg-key');
+  }
+  &__button {
+    border: none;
+    border-radius: 5px;
+    height: 65px;
+    font-size: 2em;
+    font-family: $ff;
+    cursor: pointer;
+    transition: $animation;
+    @include themify($themes) {
+      background-color: themed('key-main');
+      color: themed('txt-main-key');
+      box-shadow: inset 0 -5px 0 0 themed('key-main-shadow') ;
+    }
+    &.del {
+      font-size: 1.2em;
+      @include themify($themes) {
+        background-color: themed('key-special');
+        color: themed('txt-white');
+        box-shadow: inset 0 -5px 0 0 themed('key-special-shadow') ;
+      }
+    }
+    &.reset {
+      font-size: 1.2em;
+      grid-column: 1/3;
+      @include themify($themes) {
+        background-color: themed('key-special');
+        color: themed('txt-white');
+        box-shadow: inset 0 -5px 0 0 themed('key-special-shadow') ;
+      }
+    }
+    &.equal {
+      grid-column: 3/5;
+      @include themify($themes) {
+        background-color: themed('key-equal');
+        color: themed('txt-equal');
+        box-shadow: inset 0 -5px 0 0 themed('key-equal-shadow') ;
+      }
+    }
+  }
+}
