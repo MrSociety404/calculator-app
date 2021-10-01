@@ -34,7 +34,7 @@
       @include themify($themes) {
         background-color: themed('bg-key');
       }
-      &::-webkit-slider-thumb {
+      &::-webkit-slider-thumb,&::-moz-range-thumb  {
         cursor: pointer;
         appearance: none;
         width: 17px;
