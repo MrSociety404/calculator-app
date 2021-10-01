@@ -10,6 +10,7 @@ window.onload = () => {
   } else {
     html.className = ''
     html.classList.add("theme-light")
+    themeRange.value = 2
   }
 }
 

@@ -18,6 +18,7 @@
     font-family: $ff;
     cursor: pointer;
     transition: $animation;
+    user-select: none;
     @include themify($themes) {
       background-color: themed('key-main');
       color: themed('txt-main-key');
