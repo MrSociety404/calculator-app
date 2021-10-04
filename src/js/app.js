@@ -34,7 +34,11 @@ const executeBtn = (value) => {
 // Adding event listener for all btn
 allbtn.forEach(btn => {
   btn.addEventListener("click", () => {
-    executeBtn(btn.value)
+    if(screen.textContent.length < 13 || btn.value == 'reset') {
+      executeBtn(btn.value)
+    } else {
+      screen.textContent = "stack overflow !"
+    }
     getError = false
   })
 })
