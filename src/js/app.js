@@ -23,7 +23,11 @@ const executeBtn = (value) => {
       }      
       break;
     default:
-      screen.textContent += value
+      if(!screen.textContent) {
+        screen.textContent += value == '0' ? '' : value
+      } else {
+        screen.textContent += value
+      }
   }
 }
 
